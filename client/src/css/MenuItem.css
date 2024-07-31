@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* --------------------------- menuItem --------------------------- */
+
+nav .menuItem {
+  position: relative;
+}
+
+nav .menuItem a.active button {
+  /* font-weight: 900; */
+  color: rgb(58, 155, 190);
+  /* color: rgb(177, 177, 177);
+  color: black; */
+}
+
+nav .menuItem button::after {
+  position: absolute;
+  content: "";
+  bottom: 0.2rem;
+  left: 0;
+  background-color: rgb(177, 177, 177);
+  height: 1px;
+  width: 0;
+  transition: width 1s ease, background-color 0.6s ease;
+}
+
+nav .menuItem button:hover::after {
+  width: 100%;
+}
+
+nav .menuItem .dropdownItem button::after {
+  background-color: transparent;
+}
+
+/* --------------------------- dropdownItem --------------------------- */
+
+nav .menuItem .dropdownMenu {
+  width: 140%;
+  position: absolute;
+  overflow: hidden;
+  top: 100%;
+  left: -20%;
+  height: 0;
+  z-index: 10;
+  transition: height 0.5s ease-in-out;
+  border-radius: 0.2rem;
+}
+
+nav .dropdownMenu .dropdownItem:first-of-type button {
+  padding-top: 2rem;
+}
+
+nav .dropdownMenu .dropdownItem:last-of-type button {
+  padding-bottom: 2rem;
+}
+
+nav .menuItem:hover .dropdownMenu {
+  height: max-content;
+}
+
+nav .dropdownItem button {
+  font-size: 0.9rem;
+}
+
+/* --------------------------- menuItem & dropdownItem --------------------------- */
+
+nav .menuItem button,
+nav .dropdownItem button {
+  /* font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 200; */
+  /* font-family: "Mitr", sans-serif;
+  font-weight: 200; */
+  /* font-family: "Darker Grotesque", sans-serif;
+  font-weight: 500; */
+  font-size: 1rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  /* transition: color 0.3s ease, font-weight 1s ease; */
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+nav .menuItem:hover .dropdownItem button {
+  color: black;
+}
+
+nav .menuItem:hover button,
+nav .menuItem:hover .dropdownItem:hover button {
+  color: rgb(177, 177, 177);
+  cursor: pointer;
+}
+/* .menuItem:hover button,
+.dropdownItem:hover button {
+  cursor: pointer;
+  color: rgb(177, 177, 177);
+} */
+nav .menuItem:hover a.active button,
+nav .dropdownItem:hover a.active button {
+  color: rgb(177, 177, 177);
+}

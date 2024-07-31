@@ -1,0 +1,60 @@
+/* body {
+  overflow: hidden;
+} */
+
+header {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  margin: 0 clamp(1rem, 4vw, 10rem);
+  margin: 0 clamp(1rem, 12vw, 10rem);
+  background: url(/homeBackgroundInside.jpg) top/cover no-repeat;
+  background-position: center 45%;
+}
+
+header .siteTitle {
+  position: absolute;
+  top: 35%;
+  left: clamp(2rem, 5vw, 24rem);
+}
+
+/* header::before,
+header::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  border-image-repeat: repeat;
+  border-image-source: url(/kier-in-sight-archives-shLU6SZfIQY-unsplash.jpg);
+}
+header::after {
+  border-top: 5px solid gold;
+  border-right: 5px solid gold;
+  border-image-slice: 10;
+  height: 70vh;
+  left: -25vw;
+  width: 100vw;
+}
+header::before {
+  border-top: 2px solid gold;
+  border-left: 2px solid gold;
+  border-image-slice: 3;
+  height: 25vh;
+  right: 0vw;
+  width: 53vw;
+} */
+
+header ul {
+  font-family: "Poiret One", sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+}
+ 
+header h3 {
+  font-family: "Poiret One", sans-serif;
+  letter-spacing: 10px;
+  line-height: 5rem;
+  font-size: 1.5rem;
+  color: white;
+  text-indent: 10vw;
+}
